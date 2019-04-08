@@ -1,0 +1,25 @@
+.mui-content {
+  background-color: #fff;
+}
+.mui-content .getCode {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  color: #006699;
+  font-size: 16px;
+  transform: translateY(-50%);
+}
+.mui-content .mui-button-row {
+  padding: 5px 10px;
+}
+.mui-content .mui-button-row .register {
+  display: block;
+  width: 100%;
+}
+.mui-content .quickLogin {
+  display: block;
+  color: #006699;
+  text-align: right;
+  margin-top: 10px;
+  padding-right: 10px;
+}

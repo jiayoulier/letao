@@ -1,0 +1,67 @@
+#refreshContainer {
+  position: absolute;
+  left: 0;
+  top: 44px;
+  bottom: 50px;
+  background-color: #fff;
+  padding: 10px;
+}
+#refreshContainer .filter {
+  margin-top: 10px;
+  padding: 5px 0;
+  text-align: center;
+  background-color: #f0eff4;
+}
+#refreshContainer .le_product {
+  padding: 8px;
+  width: 100%;
+}
+#refreshContainer .le_product > .product_title > img {
+  display: block;
+  width: 100%;
+}
+#refreshContainer .le_product > .product_content {
+  padding-top: 10px;
+}
+#refreshContainer .le_product > .product_content li {
+  width: 50%;
+  float: left;
+  padding: 5px;
+}
+#refreshContainer .le_product > .product_content li > a {
+  width: 100%;
+  display: block;
+  box-shadow: 0 0 5px #ccc;
+  padding: 10px;
+  text-align: center;
+}
+#refreshContainer .le_product > .product_content li > a > img {
+  display: block;
+  width: 100%;
+}
+#refreshContainer .le_product > .product_content li > a > button {
+  background-color: #006699;
+  color: #fff;
+}
+#refreshContainer .le_product > .product_content li > a > p {
+  margin-bottom: 0;
+  line-height: 16px;
+}
+#refreshContainer .le_product > .product_content li > a > p:nth-of-type(3) {
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+#refreshContainer .le_product > .product_content li > a > p:nth-of-type(3) > span:first-of-type {
+  color: red;
+  margin-right: 5px;
+}
+#refreshContainer .le_product > .product_content li > a > p:nth-of-type(3) > span:last-of-type {
+  text-decoration: line-through;
+}
+#refreshContainer #product_list li a p:nth-of-type(2) {
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

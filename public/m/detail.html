@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>加油立儿--商品详情</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="./assets/mui/css/mui.css">
+    <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="assets/html5shiv/html5shiv.min.js"></script>
+    <script src="assets/zepto/zepto.min.js"></script>   
+    <script src="./assets/mui/js/mui.min.js"></script>
+    <script src="./assets/art-template/template-web.js"></script>
+    <script src="./js/public.js"></script>
+    <script src="./js/detail.js"></script>
+    <style>
+        .mui-content {
+            background-color: #fff;
+            padding-bottom: 50px;
+        }
+        .mui-content .product_title {
+            padding: 10px;
+            font-size: 16px;
+        }
+        .mui-content .product_price {
+            font-size: 14px;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0 10px 10px;
+        }
+        .mui-content .product_price .newPrice {
+            color: red;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+        .mui-content .product_price .oldPrice {
+            font-size: 12px;
+            color: #ccc;
+            text-decoration: line-through;
+        }
+        .mui-content .product_size {
+            padding: 10px;
+        }
+        .mui-content .product_size span {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            border: 1px solid #ccc;
+            margin-bottom: 5px;
+        }
+        .mui-content .product_size span.active {
+            color: #fff;
+            background-color: orange;
+        }
+        .product_num {
+            padding: 10px;
+            line-height: 28px;
+            border-top: 1px solid #ccc;
+        }
+        .mui-content .product_num .selectNum {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .mui-content .product_num .selectNum input {
+            float: left;
+            width: 28px;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            border-radius: 0;
+            border-left: 0;
+            border-right: 0;
+        }
+        .mui-content .product_num .selectNum span {
+            float: left;
+            width: 28px;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+        .join_cart {
+            padding: 10px;
+            overflow: hidden;
+        }
+        .join_cart span {
+            float: left;
+            width: 50%;
+            background-color: #9a1121;
+            padding: 10px 0;
+            text-align: center;
+            color: #fff;
+        }
+        .join_cart span:first-of-type {
+            background-color: #fb672e;
+        }
+    </style>
+</head>
+<body>
+    <header id="header" class="mui-bar mui-bar-nav lt_header">
+        <a href="search_result.html" class="mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">商品详情</h1>
+    </header>
+    <div class="mui-content">
+       
+       
+        <div class="join_cart">
+            <span id="lookCart">查看购物车</span>
+            <span id="addCart">加入购物车</span>
+        </div>
+    </div>
+    <nav class="mui-bar mui-bar-tab lt_footer">
+        <a class="mui-tab-item" href="index.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-tab-item" href="category.html">
+            <span class="mui-icon mui-icon-bars"></span>
+            <span class="mui-tab-label">分类</span>
+        </a>
+        <a class="mui-tab-item" href="cart.html">
+            <span class="mui-icon fa fa-shopping-cart" aria-hidden="true"></span>
+            <span class="mui-tab-label">购物车</span>
+        </a>
+        <a class="mui-tab-item" href="member.html">
+            <span class="mui-icon mui-icon-person"></span>
+            <span class="mui-tab-label">会员中心</span>
+        </a>
+    </nav>
+    <script type="text/template" id="detail_temp">
+        <div class="mui-slider">
+            <div class="mui-slider-group">
+                {{each pic value index}}
+                    <div class="mui-slider-item">    
+                        <img src="{{value.picAddr}}" />
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+        <div class="product_title">{{proName}}</div>
+        <div class="product_price">
+            价格: <span class="newPrice">&yen;{{price}}</span><span class="oldPrice">&yen;{{oldPrice}}</span>
+        </div>
+        <div class="product_size">
+            尺码: 
+            <% var size = size.split('-') %>
+            <% for(var i = size[0]; i <= size[1]; i++){ %>           
+                <span><%=i%></span>
+            <% } %>
+        </div>
+        <div class="product_num mui-clearfix">
+            <span class="mui-pull-left ">数量:</span>
+            <div class="mui-pull-left selectNum mui-clearfix">
+                <span id="num_reduce">-</span>
+                <input type="text" value="1">
+                <span id="num_increase">+</span>
+            </div>
+            <span class="mui-pull-left">剩余: {{num}}件</span>
+        </div>
+    </script>
+</body>
+</html>

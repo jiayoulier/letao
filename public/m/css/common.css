@@ -1,0 +1,30 @@
+li {
+    list-style: none;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
+  }
+  .lt_header {
+    background-color: #006699;
+  }
+  .lt_header > h1 {
+    color: #fff;
+  }
+  .lt_header > a {
+    color: #fff;
+  }
+  .lt_footer {
+    background-color: #006699;
+  }
+  .lt_footer > .mui-tab-item {
+    color: #fff;
+  }
+  .lt_footer > .mui-tab-item.mui-active {
+    color: darkorange;
+  }

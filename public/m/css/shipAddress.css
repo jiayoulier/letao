@@ -1,0 +1,17 @@
+.mui-content {
+  background-color: #fff;
+}
+.mui-content > a {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  color: #333;
+  font-size: 18px;
+}
+.mui-content .mui-media-body {
+  font-size: 16px;
+}
+.mui-content .mui-media-body > p {
+  font-size: 12px;
+}

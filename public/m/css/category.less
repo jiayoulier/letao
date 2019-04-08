@@ -1,0 +1,60 @@
+.le_content {
+    position: absolute;
+    left: 0;
+    top: 44px;
+    bottom: 50px;
+    width: 100%;
+    background-color: #f5f5f5;
+    > div {
+        position: relative;
+        height: 100%;
+    }
+    > .content_left {
+        float: left;
+        width: 80px;
+         .links {
+            background-color: #fff;
+            > a {
+                display: block;
+                height: 45px;
+                line-height: 45px;
+                text-align: center;
+                color: #333;
+                border-bottom: 1px solid #e0e0e0;
+                border-right: 1px solid #e0e0e0;
+                &.active {
+                    background-color: #f5f5f5;
+                    border-right-color: transparent;
+                }
+            }
+            > a:last-of-type {
+                border-bottom: none;
+            }
+        }
+    }
+    > .content_right {
+        margin-left: 90px;
+         .brand_list {
+            margin-top: 10px;
+            background-color: #fff;
+             > li {
+                 float: left;
+                 width: 33.33%;
+                 > a {
+                     display: block;
+                     width: 100%;
+                     text-align: center;
+                      > img {
+                          width: 100%;
+                          display: block;
+                      }
+                 }
+             }
+             > .noData {
+                 padding: 10px;
+                 font-size: 16px;
+                 color: hotpink;
+             }
+         }
+    }
+}
